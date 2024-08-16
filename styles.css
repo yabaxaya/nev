@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6fa; /* Светлый фоновый цвет по умолчанию */
+    color: #333; /* Цвет текста по умолчанию */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #2e2e2e; /* Темный фоновый цвет */
+    color: #f0f0f0; /* Светлый цвет текста */
+}
+
+h1 {
+    color: #333;
+}
+
+.dark-mode h1 {
+    color: #f0f0f0; /* Цвет заголовка в темной теме */
+}
+
+#game-container, #admin-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Светлый фон для блоков */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.dark-mode #game-container, .dark-mode #admin-container {
+    background-color: rgba(50, 50, 50, 0.8); /* Темный фон для блоков */
+}
+
+input[type="number"], input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6f61;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #e55d50;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+#hint-message, #admin-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.dark-mode #hint-message, .dark-mode #admin-message {
+    color: #f0f0f0;
+}
+
+#score-board, #admin-score-board {
+    margin-top: 20px;
+}
+
+#instructions, #admin-login {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode #instructions, .dark-mode #admin-login {
+    background-color: #444;
+    color: #f0f0f0;
+}
+
+#admin-container {
+    display: none;
+}
+
+#theme-toggle {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6a0dad; /* Фиолетовый цвет кнопки */
+    color: #fff;
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    background-color: #5a0b9d;
+}
+
+#admin-button {
+    display: none; /* Скрываем кнопку "Админка" */
+}
+

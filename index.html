@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадай число</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Игра "Угадай число"</h1>
+
+    <div id="game-container">
+        <p>Введите число от 1 до <span id="max-number">100</span>:</p>
+        <input type="number" id="guess-input" min="1" max="100">
+        <button id="submit-button">Проверить</button>
+        <p id="message"></p>
+        <p id="hint-message"></p>
+        <p id="attempts-left">Попытки: 3</p>
+        <p id="score">Очки: 0</p>
+        <div id="score-board">
+            <h2>Таблица лидеров</h2>
+            <ul id="leaderboard"></ul>
+        </div>
+        <button id="restart-button" style="display: none;">Начать заново</button>
+        <button id="show-help">Показать инструкции</button>
+        <div id="instructions" style="display: none;">
+            <h2>Инструкции</h2>
+            <p>В этой игре вам нужно угадать загаданное число в диапазоне от 1 до <span id="instructions-max-number">100</span>. У вас есть 3 попытки, чтобы угадать число. После каждой попытки вы получите подсказку о том, насколько близко вы к правильному ответу. Удачи!</p>
+        </div>
+        <button id="theme-toggle">Переключить тему</button>
+    </div>
+
+    <div id="admin-container">
+        <div id="admin-login">
+            <h2>Вход в админку</h2>
+            <input type="text" id="admin-password" placeholder="Пароль">
+            <button id="login-button">Войти</button>
+            <p id="admin-message"></p>
+        </div>
+
+        <div id="admin-panel">
+            <h2>Админка</h2>
+            <p>Количество сыгранных игр: <span id="games-played">0</span></p>
+            <p>Среднее количество попыток: <span id="avg-attempts">0</span></p>
+            <p>Рекорды:</p>
+            <div id="admin-score-board">
+                <h2>Таблица лидеров</h2>
+                <ul id="admin-leaderboard"></ul>
+            </div>
+            <button id="back-to-game">Вернуться к игре</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
